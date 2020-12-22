@@ -1,0 +1,205 @@
+%%%%%%%%%%%%%%%%%
+% This is an example CV created using altacv.cls (v1.3, 10 May 2020) written by
+% LianTze Lim (liantze@gmail.com), based on the
+% Cv created by BusinessInsider at http://www.businessinsider.my/a-sample-resume-for-marissa-mayer-2016-7/?r=US&IR=T
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[10pt,a4paper,ragged2e,withhyper]{altacv}
+
+%% AltaCV uses the fontawesome5 and academicon fonts
+%% and packages.
+%% See http://texdoc.net/pkg/fontawesome5 and http://texdoc.net/pkg/academicons for full list of symbols. You MUST compile with XeLaTeX or LuaLaTeX if you want to use academicons.
+
+% Change the page layout if you need to
+\geometry{left=1.25cm,right=1.25cm,top=1.5cm,bottom=1.5cm,columnsep=1.2cm}
+
+% The paracol package lets you typeset columns of text in parallel
+\usepackage{paracol}
+\usepackage{setspace}
+\usepackage[default]{lato}
+
+
+% Change the colours if you want to
+\definecolor{Black}{HTML}{000000}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+% \colorlet{name}{black}
+\colorlet{tagline}{Black}
+\colorlet{heading}{Black}
+\colorlet{headingrule}{Black}
+\colorlet{accent}{Black}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change some fonts, if necessary
+% \renewcommand{\namefont}{\Huge\rmfamily\bfseries}
+% \renewcommand{\personalinfofont}{\footnotesize}
+% \renewcommand{\cvsectionfont}{\LARGE\rmfamily\bfseries}
+% \renewcommand{\cvsubsectionfont}{\large\bfseries}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+\newcommand{\cvtagsmall}[1]{\cvtagx{\footnotesize{#1}}}
+
+\begin{document}
+\name{Vikram Singh}
+\tagline{University of Pennsylvania}
+% Cropped to square from https://en.wikipedia.org/wiki/Marissa_Mayer#/media/File:Marissa_Mayer_May_2014_(cropped).jpg, CC-BY 2.0
+%% You can add multiple photos on the left or right
+% \photoL{2cm}{Yacht_High,Suitcase_High}
+\personalinfo{%
+  % Not all of these are required!
+  % You can add your own with \printinfo{symbol}{detail}
+  \href{mailto::singhvik@sas.upenn.edu}{\email{singhvik@sas.upenn.edu}}
+%   \phone{000-00-0000}
+  \location{Hong Kong}
+  \href{https://www.linkedin.com/in/vikram-singh-2002/}{\linkedin{vikram-singh-2002}}
+  \href{https://github.com/vsingh18567}{\github{vsingh18567}}
+%   \orcid{orcid.org/0000-0000-0000-0000} % Obviously making this up too. If you want to use this field (and also other academicons symbols), add "academicons" option to \documentclass{altacv}
+  %% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+  % \orcid{0000-0000-0000-0000}
+  %% You can add your own arbtrary detail with
+  %% \printinfo{symbol}{detail}[optional hyperlink prefix]
+  % \printinfo{\faPaw}{Hey ho!}
+  %% Or you can declare your own field with
+  %% \NewInfoFiled{fieldname}{symbol}[optional hyperlink prefix] and use it:
+  % \NewInfoField{gitlab}{\faGitlab}[https://gitlab.com/]
+  % \gitlab{your_id}
+}
+
+\makecvheader
+
+Freshman studying Mathematics \& Computer Science. Looking for internship opportunities in Software Engineering and Data Science. 
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+\AtBeginEnvironment{itemize}{\small}
+
+%% Set the left/right column width ratio to 6:4.
+\columnratio{0.6}
+% Start a 2-column paracol. Both the left and right columns will automatically
+% break across pages if things get too long.
+\begin{paracol}{2}
+
+\cvsection{Experience}
+
+\cvevent{Data Analyst}{Wharton Analytics Fellows}{Sep 2020 -- Nov 2020}{Remote}
+\begin{itemize}
+\item Worked with SaaS Healthcare company with the aim of reducing customer churn. Used machine learning techniques to create a churn prediction model and identify key indicators of churn. 
+\item Independently built Flask API to productionize model \& presented findings to company.
+\end{itemize}
+
+\divider
+
+\cvevent{Summer Intern}{Rupifi}{Jun 2020 -- Jul 2020}{Remote}
+\begin{itemize}
+\item Studied the API documentation of Fintech companies to find trends in the types of services offered, and the tools provided to allow for easy integration.  
+\end{itemize}
+
+\divider
+
+\cvevent{Student Researcher}{Hong Kong University}{Jun 2019 -- Aug 2019}{Hong Kong}
+
+\begin{itemize}
+  \item Worked under Prof. Zou at HKU to research the causes of IPO under-pricing and develop a linear regression model to predict degree of under-pricing. Wrote a report on findings.
+\end{itemize}
+\divider
+
+
+\cvsection{Projects}
+
+\cvproject{FM Analytics \href{https://github.com/vsingh18567/FMAnalytics}{\github{}}\cvtagsmall{Python} \cvtagsmall{Django} \cvtagsmall{Data Analysis}\cvtagsmall{HTML}
+}
+
+\begin{itemize}
+  \item Website that allows Football Manager (FM) players to upload their game data and have it stored and analysed. 
+  \item Currently in progress
+\end{itemize}
+
+\divider 
+
+\cvproject{Web Blog \href{https://github.com/vsingh18567/vsinghBlog}{\github{}\cvtagsmall{Python} \cvtagsmall{Django} \cvtagsmall{HTML}}}
+
+\begin{itemize}
+  \item Basic blog application that allows for CRUD operations on blog posts and handles user authentication
+\end{itemize}
+\divider
+\cvproject{Minesweeper \href{https://github.com/vsingh18567/minesweeper}{\github{}}\cvtagsmall{Java}\cvtagsmall{Swing}}
+
+\begin{itemize}
+  \item Implementation of the traditional Minesweeper game using the Java Swing GUI library. Implements the Model-View-Controller GUI structure, File I/O and the recursive flood-fill algorithm. 
+\end{itemize}
+\divider
+\cvproject{Coronavirus Tracker \href{https://github.com/vsingh18567/CoronavirusTracker}{\github{}}\cvtagsmall{Python}\cvtagsmall{Web Scraping}}
+\begin{itemize}
+  \item Script that scrapes Worldometer's Coronavirus data everyday and sends an e-mail with an update.  
+\end{itemize}
+
+% use ONLY \newpage if you want to force a page break for
+% ONLY the currentc column
+
+%% Switch to the right column. This will now automatically move to the second
+%% page if the content is too long.
+\switchcolumn
+
+\cvsection{Skills}
+\cvtag{Python} \cvtag{Data Analysis} \cvtag{pandas} \cvtag{Django} \cvtag{numpy} \cvtag{scikit-learn} \cvtag{Java} \cvtag{Swing} \cvtag{\LaTeX} \cvtag{OCaml}
+
+\divider
+
+\cvtag{Leadership} \cvtag{Public Speaking / Debate} \cvtag{Adaptability} \cvtag{Commitment} \cvtag{Integrity}
+
+\cvsection{Education}
+
+\cveventx{Bachelor of Arts}{University of Pennsylvania}{2020 -- }{Current GPA: X.X/4.0}
+\begin{itemize}
+  \item Intending to major in Mathematics \& Computer Science
+  \item Relevant Coursework (including Spring 2021):
+\end{itemize}
+
+\cvtagsmall{Programming Techniques I-II}\cvtagsmall{Hon. Calculus II-III}\cvtagsmall{Maths of Computer Science}\cvtagsmall{Probability}
+
+\divider
+
+\cveventx{IB Diploma}{German Swiss International School}{2011 -- 2020}{43/45}
+\begin{itemize}
+  \item Higher-Level subjects: Mathematics, Economics, Physics
+  \item ACT: 36/36
+\end{itemize}
+
+\cvsection{Activities}
+\begin{itemize}
+  \item Deputy Vice-President, Undergraduate Statistics Society
+  \item Head Student and Head of Student Council, German Swiss International School
+  \item Semi-finalist or better at six debate tournaments across Asia, Top 10 speaker at five tournaments.
+  \item High-school Varsity Tennis Team Captain, Top 50 ranked junior in Hong Kong
+\end{itemize}
+
+\cvsection{Hobbies}
+\begin{itemize}
+  \item Rock music
+  \item Soccer \& Tennis
+  \item Global Affairs
+\end{itemize}
+
+\end{paracol}
+
+\end{document}
