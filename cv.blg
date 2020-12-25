@@ -1,5 +1,0 @@
-[0] Config.pm:304> INFO - This is Biber 2.14
-[0] Config.pm:307> INFO - Logfile is 'cv.blg'
-[120] biber-darwin:322> INFO - === Tue Dec 22, 2020, 18:50:03
-[139] Biber.pm:415> INFO - Reading 'cv.bcf'
-[277] Utils.pm:304> WARN - No data sources defined!
